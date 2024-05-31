@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.">
+    <link rel="stylesheet" href="yahtzee.css">
+    <title>Yahtzee</title>
+</head>
+
+<body>
+    <section class="speloverzicht">
+        <h1>Yahtzee</h1>
+        <section class="new-game">
+            <h2 hidden>new game area</h2>
+            <button id="newgame-button">Start New Game</button>
+        </section>
+        <section class="spel-gebied">
+            <section class="dice-area">
+                <h2>Dice area</h2>
+                <div class="dice-row">
+                    <div id="dice-container"></div>
+                    <p id="attempts" hidden></p>
+                    <p id="turns" hidden></p>
+                    <p id="explanation" hidden>Roll the dice to play, you have a total of 13 turns (3 throws/turn)</p>
+                    <span id="warning" hidden>Choose a score!</span>
+                </div>
+                <button id="roll-button">Roll Dice</button>
+            </section>
+            <section class="score-area">
+                <h2>Score Card</h2>
+                <table>
+                    <thead hidden>
+                        <th></th>
+                        <th></th>
+                    </thead>
+                    <tr>
+                        <td>Ones</td>
+                        <td><button id="1-score" class="number">0</button></td>
+                    </tr>
+                    <tr>
+                        <td>Twos</td>
+                        <td><button id="2-score" class="number">0</button></td>
+                    </tr>
+                    <tr>
+                        <td>Threes</td>
+                        <td><button id="3-score" class="number">0</button></td>
+                    </tr>
+                    <tr>
+                        <td>Fours</td>
+                        <td><button id="4-score" class="number">0</button></td>
+                    </tr>
+                    <tr>
+                        <td>Fives</td>
+                        <td><button id="5-score" class="number">0</button></td>
+                    </tr>
+                    <tr>
+                        <td>Sixes</td>
+                        <td><button id="6-score" class="number">0</button></td>
+                    </tr>
+                    <tr>
+                        <td class="score-name">Total</td>
+                        <td button id="total-dice-score" class="score">0</td>
+                    </tr>
+                    <tr>
+                        <td class="score-name">Bonus</td>
+                        <td id="bonus-dice-score" class="score">0</td>
+                    </tr>
+                    <tr>
+                        <td>Three of a Kind</td>
+                        <td><button id="three-kind-score" class="number">0</button></td>
+                    </tr>
+                    <tr>
+                        <td>Four of a Kind</td>
+                        <td><button id="four-kind-score" class="number">0</button></td>
+                    </tr>
+                    <tr>
+                        <td>Full House</td>
+                        <td><button id="full-house-score" class="number">0</button></td>
+                    </tr>
+                    <tr>
+                        <td>Small Straight</td>
+                        <td><button id="small-straight-score" class="number">0</button></td>
+                    </tr>
+                    <tr>
+                        <td>Large Straight</td>
+                        <td><button id="large-straight-score" class="number">0</button></td>
+                    </tr>
+                    <tr>
+                        <td>Yahtzee</td>
+                        <td><button id="yahtzee-score" class="number">0</button></td>
+                    </tr>
+                    <tr>
+                        <td>Chance</td>
+                        <td><button id="chance-score" class="number">0</button></td>
+                    </tr>
+                    <tr>
+                        <td class="score-name">TOTAL SCORE</td>
+                        <td id="total-score" class="score">0</td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+    </section>
+    <script src="yahtzeeController.js" type="module"></script>
+</body>
+
+</html>

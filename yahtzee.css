@@ -1,0 +1,172 @@
+@font-face {
+    font-family: roboto;
+    src: url('./fonts/Roboto/Roboto-Regular.ttf');
+}
+
+body {
+    background-color: #555252;
+    font-family: roboto, Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0 auto;
+}
+
+button {
+    background-color: #373535;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 1em 2em;
+    text-align: center;
+}
+
+button:hover {
+    background-color: grey;
+}
+
+button:active {
+    background-color: red;
+}
+
+.speloverzicht {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        "titel titel"
+        "new new"
+        "card card";
+}
+
+.speloverzicht h1 {
+    color: white;
+    grid-area: titel;
+    text-align: center;
+
+}
+
+.new-game {
+    grid-area: new;
+    background-color: #373535
+}
+
+#newgame-button {
+    margin-left: 10em;
+}
+
+.spel-gebied {
+    grid-area: card;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "dice score";
+    margin: 0 0.5em 0.5em 0.5em;
+}
+
+.dice-area {
+    grid-area: dice;
+    background-color: #799a51;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto 3fr auto;
+    grid-template-areas:
+        "title"
+        "text"
+        "."
+        "button";
+    text-align: center;
+}
+
+.dice-area h2 {
+    grid-area: title;
+}
+
+.dice-row {
+    grid-area: text;
+}
+
+.dice-free {
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+.dice-hold {
+    background-color: red;
+    margin-bottom: 1.1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding: 0.5em;
+    width: 9%;
+}
+
+#roll-button {
+    grid-area: button;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    width: 20%;
+}
+
+.score-area {
+    background-color: #f4cc98;
+    border-radius: 12px;
+    grid-area: score;
+    text-align: center;
+}
+
+.score-area table {
+    background-color: #f4cc98;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    width: 80%;
+    text-align: left;
+}
+
+.score-area td {
+    border: 1px solid black;
+}
+
+.saved {
+    background-color: #748b53;
+    color: white;
+    height: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.saved:hover {
+    background-color: #748b53;
+}
+
+.score {
+    background-color: #edbe73;
+    font-weight: bold;
+    height: 2em;
+    text-align: center;
+    width: 5em;
+}
+
+.score-name {
+    background-color: #edbe73;
+    font-weight: bold;
+    height: 2em;
+}
+
+.number {
+    background-color: #a05f5f;
+    color: white;
+    height: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.number:hover {
+    background-color: #799a51;
+}
+
+.number:active {
+    background: green;
+}
